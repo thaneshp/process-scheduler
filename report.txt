@@ -1,0 +1,26 @@
+CS-REPORT
+1. My CS-algorithm is an implementation of shortest job first.
+Essentially, this algorithm compares all processes that have arrived and 
+sorts them in ascending order based on their running time. It then executes
+the process with the shortest time first.
+
+2. It performs better than the baselines when all other processes arrive 
+within the time it takes to complete the first. The remaining processes 
+should also have lower running times.
+
+3. It does not perform as well when there are long processes to 
+be executed. Processes with long running times may have to wait for shorter 
+processes to be executed first, increasing wait times.
+
+
+CM-REPORT
+1. My CM-algorithm is an implementation of Most Recently Used algorithm. 
+Unlike LRU, this algorithm works by evicting the pages in memory which have been 
+assigned the most recently.
+
+2. It performs better than baselines specifically when there are old processes 
+likely to be accessed more frequently. This way these pages can be accessed later
+without having to evict and re-load pages.
+
+3. It does not perform as well when running time and memory requirements are low or similar
+to each other. In these cases it performs similar to the baselines at best.
