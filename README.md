@@ -127,7 +127,6 @@ $ ./scheduler -f input-data/rr_memoryoverlap.txt -a rr -s 40 -m v -q 10
 Reach out to me on one of the following places!
 - Email: thanesh.pannirselvam@gmail.com
 - LinkedIn: linkedin.com/in/thanesh-pannirselvam
-- Website: https://www.thanesh.io
 
 
 
