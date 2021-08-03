@@ -33,7 +33,7 @@ Process Scheduler is a program built as part of my Computer Systems (COMP30023) 
 
 ## Setup with Docker
 
-If you have Docker installed, use the following command to pull the Process Scheduler's image. Alternatively, if you are don't have Docker, skip this step and set up the project via cloning.
+If you have Docker installed, use the following command to pull the Process Scheduler's image. Alternatively, if you don't have Docker, skip this step and set up the project via cloning.
 
 ```bash
 $ docker pull thaneshp/process-scheduler
@@ -47,7 +47,7 @@ Once you have pulled the image, you can use the following command to run the Pro
 $ docker run -it --rm thaneshp/process-scheduler -f <filename> -a <scheduling-algorithm> -m <memory-allocation> -s <memory-size> -q <quantum>
 ```
 
-### Example
+### Docker Example
 
 Using docker to execute a First-come first-serve algorithm using Swapping-X algorithm with 20KB memory.
 
