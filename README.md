@@ -47,9 +47,7 @@ Once you have pulled the image, you can use the following command to run the Pro
 $ docker run -it --rm thaneshp/process-scheduler -f <filename> -a <scheduling-algorithm> -m <memory-allocation> -s <memory-size> -q <quantum>
 ```
 
-### Docker Example
-
-Using docker to execute a First-come first-serve algorithm using Swapping-X algorithm with 20KB memory.
+### Example command using Docker
 
 ```bash
 docker run -it --rm thaneshp/process-scheduler -f input-data/rr_memoryoverlap.txt -a ff -s 20 -m p
