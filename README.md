@@ -31,6 +31,31 @@ Process Scheduler is a program built as part of my Computer Systems (COMP30023) 
 
 **Note**: The letters given in the parenthesis are commands to be used in the execution of the program. More details given below.
 
+## Setup with Docker
+
+If you have Docker installed, use the following command to pull the Process Scheduler's image. Alternatively, if you are don't have Docker, skip this step and set up the project via cloning.
+
+```bash
+$ docker pull thaneshp/process-scheduler
+```
+
+## Usage with Docker
+
+Once you have pulled the image, you can use the following command to run the Process Scheduler. The options shown here are explained further below.
+
+```bash
+$ docker run -it --rm thaneshp/process-scheduler -f <filename> -a <scheduling-algorithm> -m <memory-allocation> -s <memory-size> -q <quantum>
+```
+
+### Example
+
+Using docker to execute a First-come first-serve algorithm using Swapping-X algorithm with 20KB memory.
+
+```bash
+docker run -it --rm thaneshp/process-scheduler -f input-data/rr_memoryoverlap.txt -a ff -s 20 -m p
+```
+
+For more examples, review the examples section below.
 
 ## Clone
 
@@ -124,7 +149,9 @@ $ ./scheduler -f input-data/rr_memoryoverlap.txt -a rr -s 40 -m v -q 10
 ```
 
 ## Support
-Reach out to me on one of the following places!
+
+You can find me at any of the following places!
+
 - Website: https://thanesh.io/
 - Email: thanesh.pannirselvam@gmail.com
 - LinkedIn: linkedin.com/in/thanesh-pannirselvam
