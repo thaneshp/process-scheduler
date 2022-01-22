@@ -36,7 +36,7 @@ Process Scheduler is a program built as part of my Computer Systems (COMP30023) 
 If you have Docker installed, use the following command to pull the Process Scheduler's image. Alternatively, if you don't have Docker, skip this step and set up the project via cloning.
 
 ```bash
-$ docker pull thaneshp/process-scheduler
+docker pull thaneshp/process-scheduler
 ```
 
 ## Usage with Docker
@@ -44,7 +44,7 @@ $ docker pull thaneshp/process-scheduler
 Once you have pulled the image, you can use the following command to run the Process Scheduler. The options shown here are explained further below.
 
 ```bash
-$ docker run -it --rm thaneshp/process-scheduler -f <filename> -a <scheduling-algorithm> -m <memory-allocation> -s <memory-size> -q <quantum>
+docker run -it --rm thaneshp/process-scheduler -f <filename> -a <scheduling-algorithm> -m <memory-allocation> -s <memory-size> -q <quantum>
 ```
 
 ### Example command using Docker
@@ -64,13 +64,13 @@ Clone this repo to your local machine using https://github.com/thaneshp/process-
 Using terminal. CD into the project folder and type in the following command to install.
 
 ```bash
-$ make
+make
 ```
 
 You may also use this command to remove any of the installed executables.
 
 ```bash
-$ make clean
+make clean
 ```
 
 ## Usage
@@ -78,7 +78,7 @@ $ make clean
 Here is how a typical input should be formatted. The order shown here is unimportant.
 
 ```bash
-$ ./scheduler -f <filename> -a <scheduling-algorithm> -m <memory-allocation> -s <memory-size> -q <quantum>
+./scheduler -f <filename> -a <scheduling-algorithm> -m <memory-allocation> -s <memory-size> -q <quantum>
 ```
 
 ### Arguments
@@ -93,67 +93,58 @@ $ ./scheduler -f <filename> -a <scheduling-algorithm> -m <memory-allocation> -s 
 
 1. First-come first-serve algorithm using unlimited memory.
 ```bash
-$ ./scheduler -f input-data/processes.txt -a ff -m u
+./scheduler -f input-data/processes.txt -a ff -m u
 ```
 
 2. Round-robin algorithm, allocated 10 seconds quantum time and using unlimited memory.
 ```bash
-$ ./scheduler -f input-data/processes.txt -a rr -m u -q 10
+./scheduler -f input-data/processes.txt -a rr -m u -q 10
 ```
 
 3. First-come first-serve algorithm using Swapping-X algorithm with 20KB memory.
 ```bash
-$ ./scheduler -f input-data/rr_memoryoverlap.txt -a ff -s 20 -m p
+./scheduler -f input-data/rr_memoryoverlap.txt -a ff -s 20 -m p
 ```
 
 4. Round-robin algorithm, allocated 10 seconds quantum time utilsing Swapping-X algorithm and 20KB memory.
 ```bash
-$ ./scheduler -f input-data/rr_memoryoverlap.txt -a rr -s 20 -m p -q 10
+./scheduler -f input-data/rr_memoryoverlap.txt -a rr -s 20 -m p -q 10
 ```
 
 5. First-come first-serve algorithm utilising Swapping-X algorithm and 20KB memory.
 ```bash
-$ ./scheduler -f input-data/rr_memoryoverlap.txt -a ff -s 20 -m p
+./scheduler -f input-data/rr_memoryoverlap.txt -a ff -s 20 -m p
 ```
 
 6. Round-robin algorithm, allocated 10 seconds quantum time utilising Least Recently Used virtual memory algorithm and 20KB memory.
 ```bash
-$ ./scheduler -f input-data/rr_memoryoverlap.txt -a rr -s 20 -m v -q 10
+./scheduler -f input-data/rr_memoryoverlap.txt -a rr -s 20 -m v -q 10
 ```
 
 7. First-come first-serve algorithm utilising Swapping-X algorithm and 48KB memory.
 ```bash
-$ ./scheduler -f input-data/timejumps.txt -a ff -s 48 -m p
+./scheduler -f input-data/timejumps.txt -a ff -s 48 -m p
 ```
 
 8. Round-robin algorithm allocated 10 seconds quantum time utilising Swapping-X algorithm and 100KB memory.
 ```bash
-$ ./scheduler -f input-data/timejumps.txt -a rr -s 100 -m p -q 10
+./scheduler -f input-data/timejumps.txt -a rr -s 100 -m p -q 10
 ```
 
 9. Round-robin algorithm, allocated 10 seconds quantum time utilising Least Recently Used virtual memory algorithm and 100KB memory.
 ```bash
-$ ./scheduler -f input-data/timejumps.txt -a rr -s 100 -m v -q 10
+./scheduler -f input-data/timejumps.txt -a rr -s 100 -m v -q 10
 ```
 
 10. Round-robin algorithm, allocated 10 seconds quantum time utilising Swapping-X algorithm and 40KB memory.
 ```bash
-$ ./scheduler -f input-data/rr_memoryoverlap.txt -a rr -s 40  -m p -q 10
+./scheduler -f input-data/rr_memoryoverlap.txt -a rr -s 40  -m p -q 10
 ```
 
 11. Round-robin algorithm, allocated 10 seconds quantum time utilising Least Recently Used virtual memory algorithm and 40KB memory.
 ```bash
-$ ./scheduler -f input-data/rr_memoryoverlap.txt -a rr -s 40 -m v -q 10
+./scheduler -f input-data/rr_memoryoverlap.txt -a rr -s 40 -m v -q 10
 ```
-
-## Support
-
-You can find me at any of the following places!
-
-- Website: https://thanesh.io/
-- Email: thanesh.pannirselvam@gmail.com
-- LinkedIn: linkedin.com/in/thanesh-pannirselvam
-
 
 
 
